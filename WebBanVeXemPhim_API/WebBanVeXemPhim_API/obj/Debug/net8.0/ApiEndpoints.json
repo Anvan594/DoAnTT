@@ -1,5 +1,223 @@
 [
   {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.GhesController",
+    "Method": "GetGhes",
+    "RelativePath": "api/Ghes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebBanVeXemPhim_API.Models.Ghe, WebBanVeXemPhim_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.GhesController",
+    "Method": "PostGhe",
+    "RelativePath": "api/Ghes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ghe",
+        "Type": "WebBanVeXemPhim_API.Models.Ghe",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.Ghe",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.GhesController",
+    "Method": "GetGhe",
+    "RelativePath": "api/Ghes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.Ghe",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.GhesController",
+    "Method": "PutGhe",
+    "RelativePath": "api/Ghes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ghe",
+        "Type": "WebBanVeXemPhim_API.Models.Ghe",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.GhesController",
+    "Method": "DeleteGhe",
+    "RelativePath": "api/Ghes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.LichChieuxController",
+    "Method": "GetLichChieus",
+    "RelativePath": "api/LichChieux",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebBanVeXemPhim_API.Models.LichChieu, WebBanVeXemPhim_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.LichChieuxController",
+    "Method": "PostLichChieu",
+    "RelativePath": "api/LichChieux",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lichChieu",
+        "Type": "WebBanVeXemPhim_API.Models.LichChieu",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.LichChieu",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.LichChieuxController",
+    "Method": "GetLichChieu",
+    "RelativePath": "api/LichChieux/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.LichChieu",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.LichChieuxController",
+    "Method": "PutLichChieu",
+    "RelativePath": "api/LichChieux/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lichChieu",
+        "Type": "WebBanVeXemPhim_API.Models.LichChieu",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.LichChieuxController",
+    "Method": "DeleteLichChieu",
+    "RelativePath": "api/LichChieux/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebBanVeXemPhim_API.Controllers.NguoiDungsController",
     "Method": "GetNguoiDungs",
     "RelativePath": "api/NguoiDungs",
@@ -109,6 +327,198 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.PhimsController",
+    "Method": "GetPhims",
+    "RelativePath": "api/Phims",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebBanVeXemPhim_API.Models.Phim, WebBanVeXemPhim_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.PhimsController",
+    "Method": "PostPhim",
+    "RelativePath": "api/Phims",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phim",
+        "Type": "WebBanVeXemPhim_API.Models.Phim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.Phim",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.PhimsController",
+    "Method": "GetPhim",
+    "RelativePath": "api/Phims/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.Phim",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.PhimsController",
+    "Method": "PutPhim",
+    "RelativePath": "api/Phims/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "phim",
+        "Type": "WebBanVeXemPhim_API.Models.Phim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.PhimsController",
+    "Method": "DeletePhim",
+    "RelativePath": "api/Phims/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.PhongsController",
+    "Method": "GetPhongs",
+    "RelativePath": "api/Phongs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebBanVeXemPhim_API.Models.Phong, WebBanVeXemPhim_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.PhongsController",
+    "Method": "GetPhong",
+    "RelativePath": "api/Phongs/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.Phong",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.PhongsController",
+    "Method": "DeletePhong",
+    "RelativePath": "api/Phongs/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.PhongsController",
+    "Method": "ThemPhongVaGhe",
+    "RelativePath": "api/Phongs/them-phong-va-ghe",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tenPhong",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tongSoGhe",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebBanVeXemPhim_API.Controllers.TaiKhoanAdminsController",
     "Method": "GetTaiKhoanAdmins",
     "RelativePath": "api/TaiKhoanAdmins",
@@ -205,6 +615,442 @@
     "ContainingType": "WebBanVeXemPhim_API.Controllers.TaiKhoanAdminsController",
     "Method": "DeleteTaiKhoanAdmin",
     "RelativePath": "api/TaiKhoanAdmins/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThanhToansController",
+    "Method": "GetThanhToans",
+    "RelativePath": "api/ThanhToans",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebBanVeXemPhim_API.Models.ThanhToan, WebBanVeXemPhim_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThanhToansController",
+    "Method": "PostThanhToan",
+    "RelativePath": "api/ThanhToans",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "thanhToan",
+        "Type": "WebBanVeXemPhim_API.Models.ThanhToan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.ThanhToan",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThanhToansController",
+    "Method": "GetThanhToan",
+    "RelativePath": "api/ThanhToans/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.ThanhToan",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThanhToansController",
+    "Method": "PutThanhToan",
+    "RelativePath": "api/ThanhToans/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "thanhToan",
+        "Type": "WebBanVeXemPhim_API.Models.ThanhToan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThanhToansController",
+    "Method": "DeleteThanhToan",
+    "RelativePath": "api/ThanhToans/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThongBaosController",
+    "Method": "GetThongBaos",
+    "RelativePath": "api/ThongBaos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebBanVeXemPhim_API.Models.ThongBao, WebBanVeXemPhim_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThongBaosController",
+    "Method": "PostThongBao",
+    "RelativePath": "api/ThongBaos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "thongBao",
+        "Type": "WebBanVeXemPhim_API.Models.ThongBao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.ThongBao",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThongBaosController",
+    "Method": "GetThongBao",
+    "RelativePath": "api/ThongBaos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.ThongBao",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThongBaosController",
+    "Method": "PutThongBao",
+    "RelativePath": "api/ThongBaos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "thongBao",
+        "Type": "WebBanVeXemPhim_API.Models.ThongBao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.ThongBaosController",
+    "Method": "DeleteThongBao",
+    "RelativePath": "api/ThongBaos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.TrailersController",
+    "Method": "GetTrailers",
+    "RelativePath": "api/Trailers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebBanVeXemPhim_API.Models.Trailer, WebBanVeXemPhim_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.TrailersController",
+    "Method": "PostTrailer",
+    "RelativePath": "api/Trailers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trailer",
+        "Type": "WebBanVeXemPhim_API.Models.Trailer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.Trailer",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.TrailersController",
+    "Method": "GetTrailer",
+    "RelativePath": "api/Trailers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.Trailer",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.TrailersController",
+    "Method": "PutTrailer",
+    "RelativePath": "api/Trailers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "trailer",
+        "Type": "WebBanVeXemPhim_API.Models.Trailer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.TrailersController",
+    "Method": "DeleteTrailer",
+    "RelativePath": "api/Trailers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.VesController",
+    "Method": "GetVes",
+    "RelativePath": "api/Ves",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebBanVeXemPhim_API.Models.Ve, WebBanVeXemPhim_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.VesController",
+    "Method": "PostVe",
+    "RelativePath": "api/Ves",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ve",
+        "Type": "WebBanVeXemPhim_API.Models.Ve",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.Ve",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.VesController",
+    "Method": "GetVe",
+    "RelativePath": "api/Ves/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebBanVeXemPhim_API.Models.Ve",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.VesController",
+    "Method": "PutVe",
+    "RelativePath": "api/Ves/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ve",
+        "Type": "WebBanVeXemPhim_API.Models.Ve",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebBanVeXemPhim_API.Controllers.VesController",
+    "Method": "DeleteVe",
+    "RelativePath": "api/Ves/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

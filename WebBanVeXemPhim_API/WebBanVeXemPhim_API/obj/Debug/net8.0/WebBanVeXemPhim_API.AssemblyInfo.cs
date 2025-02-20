@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebBanVeXemPhim_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bce83c2402d6bde1f816e5363436a02531a037e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebBanVeXemPhim_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebBanVeXemPhim_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

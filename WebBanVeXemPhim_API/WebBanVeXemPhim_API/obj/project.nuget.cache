@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i4Pasa36ias=",
+  "dgSpecHash": "zDFLr8wXXMY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\An\\source\\repos\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API.csproj",
+  "projectFilePath": "C:\\Users\\An\\Documents\\GitHub\\DoAnTT\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\An\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\An\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

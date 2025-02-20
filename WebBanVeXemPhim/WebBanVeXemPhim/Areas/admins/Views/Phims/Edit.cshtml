@@ -1,0 +1,56 @@
+﻿@model WebBanVeXemPhim.Models.Phim
+
+<div id="hienthi" class="hienthi">
+    <button class="close-btn" onclick="closeSidebar()">×</button>
+    <h3>Sửa thông tin phim</h3>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="MaPhim" />
+        <div class="form-group" style="padding:0px">
+            <label asp-for="TenPhim" class="control-label">Tên phim</label>
+            <input asp-for="TenPhim" class="form-control" />
+            <span asp-validation-for="TenPhim" class="text-danger"></span>
+        </div><div class="form-group" style="padding:0px">
+            <label asp-for="Poster" class="control-label">Ảnh</label>
+            <input asp-for="Poster" class="form-control" />
+            <span asp-validation-for="Poster" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="padding:0">
+            <label asp-for="TheLoai" class="control-label">Thể loại</label>
+            <input asp-for="TheLoai" class="form-control" />
+            <span asp-validation-for="TheLoai" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="padding:0">
+            <label asp-for="ThoiLuong" class="control-label">Thời lượng (phút)</label>
+            <input asp-for="ThoiLuong" type="number" class="form-control" />
+            <span asp-validation-for="ThoiLuong" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="padding:0">
+            <label asp-for="NgayKhoiChieu" class="control-label">Ngày khởi chiếu</label>
+            <input asp-for="NgayKhoiChieu" type="date" class="form-control" />
+            <span asp-validation-for="NgayKhoiChieu" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="padding:0">
+            <label asp-for="MoTa" class="control-label">Mô tả</label>
+            <textarea asp-for="MoTa" class="form-control"></textarea>
+            <span asp-validation-for="MoTa" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="padding:0">
+            <label asp-for="TrangThai" class="control-label"></label>
+            <select asp-for="TrangThai" class="form-control">
+                <option value="true">Hoạt động</option>
+                <option value="false">Không hoạt động</option>
+            </select>
+            <span asp-validation-for="TrangThai" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="padding-top:20px">
+            <input type="submit" value="Lưu" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -8038,11 +8038,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\An\\source\\repos\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API.csproj",
+      "projectUniqueName": "C:\\Users\\An\\Documents\\GitHub\\DoAnTT\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API.csproj",
       "projectName": "WebBanVeXemPhim_API",
-      "projectPath": "C:\\Users\\An\\source\\repos\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API.csproj",
+      "projectPath": "C:\\Users\\An\\Documents\\GitHub\\DoAnTT\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API.csproj",
       "packagesPath": "C:\\Users\\An\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\An\\source\\repos\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API\\obj\\",
+      "outputPath": "C:\\Users\\An\\Documents\\GitHub\\DoAnTT\\WebBanVeXemPhim_API\\WebBanVeXemPhim_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\An\\AppData\\Roaming\\NuGet\\NuGet.Config",
