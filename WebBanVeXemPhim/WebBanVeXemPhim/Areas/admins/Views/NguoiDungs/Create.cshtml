@@ -7,12 +7,12 @@
         @Html.AntiForgeryToken()
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
-            <label asp-for="TenNguoiDung" class="control-label"></label>
+            <label asp-for="TenNguoiDung" class="control-label">Tên người dùng</label>
             <input asp-for="TenNguoiDung" class="form-control" />
             <span asp-validation-for="TenNguoiDung" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="MatKhau" class="control-label"></label>
+            <label asp-for="MatKhau" class="control-label">Mật khẩu</label>
             <input asp-for="MatKhau" class="form-control" />
             <span asp-validation-for="MatKhau" class="text-danger"></span>
         </div>

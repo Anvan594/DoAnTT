@@ -7602,11 +7602,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\An\\source\\repos\\WebBanVeXemPhim\\WebBanVeXemPhim\\WebBanVeXemPhim.csproj",
+      "projectUniqueName": "C:\\Users\\An\\Documents\\GitHub\\DoAnTT\\WebBanVeXemPhim\\WebBanVeXemPhim\\WebBanVeXemPhim.csproj",
       "projectName": "WebBanVeXemPhim",
-      "projectPath": "C:\\Users\\An\\source\\repos\\WebBanVeXemPhim\\WebBanVeXemPhim\\WebBanVeXemPhim.csproj",
+      "projectPath": "C:\\Users\\An\\Documents\\GitHub\\DoAnTT\\WebBanVeXemPhim\\WebBanVeXemPhim\\WebBanVeXemPhim.csproj",
       "packagesPath": "C:\\Users\\An\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\An\\source\\repos\\WebBanVeXemPhim\\WebBanVeXemPhim\\obj\\",
+      "outputPath": "C:\\Users\\An\\Documents\\GitHub\\DoAnTT\\WebBanVeXemPhim\\WebBanVeXemPhim\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\An\\AppData\\Roaming\\NuGet\\NuGet.Config",

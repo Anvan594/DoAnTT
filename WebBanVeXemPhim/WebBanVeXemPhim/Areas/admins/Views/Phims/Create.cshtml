@@ -19,6 +19,17 @@
                     <span asp-validation-for="TheLoai" class="text-danger"></span>
                 </div>
                 <div class="form-group">
+                    <label asp-for="DoTuoi" class="control-label">Độ tuổi</label>
+                    <select asp-for="DoTuoi" class="form-control">
+                        <option value="">-- Chọn độ tuổi --</option>
+                        <option value="T13">T13</option>
+                        <option value="T16">T16</option>
+                        <option value="T18">T18</option>
+                        <option value="P">P</option>
+                    </select>
+                    <span asp-validation-for="DoTuoi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
                     <label asp-for="ThoiLuong" class="control-label">Thời lượng (phút)</label>
                     <input asp-for="ThoiLuong" type="number" class="form-control" min="1" required />
                     <span asp-validation-for="ThoiLuong" class="text-danger"></span>
@@ -37,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Poster" class="control-label">Ảnh poster</label>
-                    <input type="file" name="PosterFile" class="form-control" accept="" required />
+                    <input type="file" name="PosterFile" class="form-control" accept="image/*" required />
                     <span asp-validation-for="Poster" class="text-danger"></span>
                 </div>
                 <div class="form-group">

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebBanVeXemPhim.Models;
 
@@ -14,6 +15,7 @@ public partial class Phim
     public int ThoiLuong { get; set; }
 
     public string? MoTa { get; set; }
+    public string? DoTuoi { get; set; }
 
     public DateOnly NgayKhoiChieu { get; set; }
 
@@ -24,4 +26,5 @@ public partial class Phim
     public virtual ICollection<LichChieu> LichChieus { get; set; } = new List<LichChieu>();
 
     public virtual ICollection<Trailer> Trailers { get; set; } = new List<Trailer>();
+
 }

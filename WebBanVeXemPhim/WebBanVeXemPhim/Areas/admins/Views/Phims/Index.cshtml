@@ -8,7 +8,7 @@
 <h1>Quản lý phim</h1>
 
 <p>
-    <button class="btn btn-success btn-sm btnOn" onclick="loadSidebar_create()">
+    <button class="btn btn-success btn-sm btnOn" style="font-size:14px" onclick="loadSidebar_create()">
         Thêm phim <i class="fas fa-plus"></i>
     </button>
     <form method="get" asp-action="Index">
@@ -162,24 +162,33 @@
         });
     }
     function submitCreateForm() {
-        var formData = $("#createForm").serialize(); // Lấy dữ liệu form
+        var form = $("#createForm")[0];
+        var formData = new FormData(form);
+
         $.ajax({
             url: '/admins/Phims/Create',
             type: 'POST',
             data: formData,
+            contentType: false,
+            processData: false,
             success: function (response) {
-                if (response.success) {
+                console.log("Server response:", response); // Kiểm tra response từ server
+
+                if (response && response.success) {
                     alert(response.message);
-                    location.reload(); // Reload lại trang để cập nhật danh sách
+                    location.reload();
                 } else {
-                    alert("Lỗi: " + response.message);
+                    alert("Lỗi: " + (response.message || "Không nhận được phản hồi từ server"));
                 }
             },
-            error: function () {
-                alert("Đã xảy ra lỗi khi thêm tài khoản!");
+            error: function (xhr, status, error) {
+                console.log("AJAX error:", status, error); // Hiển thị lỗi chi tiết
+                alert("Đã xảy ra lỗi khi thêm phim!");
             }
         });
     }
+
+
 
     function loadSidebar_edit(phimId) {
         $.ajax({
@@ -236,4 +245,5 @@
             });
         });
     });
+
 </script>

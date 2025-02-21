@@ -13,7 +13,5 @@ public partial class Trailer
 
     public string? MoTaTrailer { get; set; }
 
-    public TimeOnly? ThoiGianTrailer { get; set; }
-
     public virtual Phim? MaPhimNavigation { get; set; }
 }

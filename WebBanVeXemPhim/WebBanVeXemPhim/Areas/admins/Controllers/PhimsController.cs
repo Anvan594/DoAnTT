@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using WebBanVeXemPhim.Models;
 
 namespace WebBanVeXemPhim.Areas.admins.Controllers
@@ -68,14 +69,15 @@ namespace WebBanVeXemPhim.Areas.admins.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Phim phim, IFormFile PosterFile)
+        public async Task<IActionResult> Create([Bind("TenPhim,TheLoai,DoTuoi,ThoiLuong,NgayKhoiChieu,MoTa,TrangThai")] Phim phim, IFormFile PosterFile)
         {
             if (!ModelState.IsValid)
             {
-                return Json(new { success = false, message = "Dữ liệu không hợp lệ!" });
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                return Json(new { success = false, message = string.Join(", ", errors) });
             }
 
-            if (PosterFile != null && PosterFile.Length > 0)
+            if (PosterFile != null)
             {
                 string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
                 string uniqueFileName = Guid.NewGuid().ToString() + "_" + PosterFile.FileName;
@@ -83,46 +85,41 @@ namespace WebBanVeXemPhim.Areas.admins.Controllers
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    PosterFile.CopyTo(fileStream);
+                    await PosterFile.CopyToAsync(fileStream);
                 }
 
                 phim.Poster = uniqueFileName;
             }
 
-            _context.Phims.Add(phim);
-            _context.SaveChanges();
+            _context.Add(phim);
+            await _context.SaveChangesAsync();
 
             return Json(new { success = true, message = "Thêm phim thành công!" });
         }
-    
 
-    public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                Console.WriteLine("Lỗi: ID phim không hợp lệ");
+                return BadRequest("ID không hợp lệ.");
             }
 
             var phim = await _context.Phims.FirstOrDefaultAsync(m => m.MaPhim == id);
             if (phim == null)
             {
-                return NotFound();
+                Console.WriteLine($"Lỗi: Không tìm thấy phim có ID = {id}");
+                return NotFound("Không tìm thấy phim.");
             }
 
             return PartialView("Edit", phim);
         }
 
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Phim phim)
+        public async Task<IActionResult> Edit(int id, Phim phim, IFormFile? PosterFile)
         {
             if (id != phim.MaPhim)
-            {
-                return NotFound();
-            }
-
-            var existingPhim = await _context.Phims.FindAsync(id);
-            if (existingPhim == null)
             {
                 return NotFound();
             }
@@ -131,12 +128,46 @@ namespace WebBanVeXemPhim.Areas.admins.Controllers
             {
                 try
                 {
-                    _context.Entry(existingPhim).CurrentValues.SetValues(phim);
+                    var existingPhim = await _context.Phims.FindAsync(id);
+                    if (existingPhim == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Kiểm tra nếu có file ảnh mới được tải lên
+                    if (PosterFile != null && PosterFile.Length > 0)
+                    {
+                        var fileName = Path.GetFileName(PosterFile.FileName);
+                        var filePath = Path.Combine("wwwroot/images", fileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await PosterFile.CopyToAsync(stream);
+                        }
+
+                        phim.Poster =  fileName; // Lưu đường dẫn mới vào DB
+                    }
+                    else
+                    {
+                        phim.Poster = existingPhim.Poster; // Giữ nguyên đường dẫn ảnh cũ
+                    }
+
+                    // Cập nhật các thông tin khác
+                    existingPhim.TenPhim = phim.TenPhim;
+                    existingPhim.TheLoai = phim.TheLoai;
+                    existingPhim.DoTuoi = phim.DoTuoi;
+                    existingPhim.ThoiLuong = phim.ThoiLuong;
+                    existingPhim.NgayKhoiChieu = phim.NgayKhoiChieu;
+                    existingPhim.MoTa = phim.MoTa;
+                    existingPhim.TrangThai = phim.TrangThai;
+                    existingPhim.Poster = phim.Poster; // Giữ hoặc cập nhật ảnh
+
+                    _context.Update(existingPhim);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!_context.Phims.Any(e => e.MaPhim == phim.MaPhim))
+                    if (!_context.Phims.Any(e => e.MaPhim == id))
                     {
                         return NotFound();
                     }
@@ -147,9 +178,9 @@ namespace WebBanVeXemPhim.Areas.admins.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-
-            return PartialView("Edit", phim);
+            return View(phim);
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
