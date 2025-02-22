@@ -5,9 +5,14 @@
     <h3>Chi tiết phim</h3>
     @if (Model != null)
     {
-        <p><img src="~/images/@Model.Poster" alt="Alternate Text" width="150px" /> </p>
+       
         <p><strong>Tên phim:</strong> @Model.TenPhim</p>
+
+        <p><strong>Đạo Diễn:</strong> @Model.DaoDien</p>
+        <p><strong>Diễn Viên:</strong> @Model.DienVien</p>
         <p><strong>Thể loại:</strong> @Model.TheLoai</p>
+        <p><strong>Ngôn ngữ:</strong> @Model.NgonNgu</p>
+
         <p><strong>Thời lượng:</strong> @Model.ThoiLuong phút</p>
         <p><strong>Ngày khởi chiếu:</strong> @Model.NgayKhoiChieu.ToString("dd/MM/yyyy")</p>
         <p><strong>Mô tả:</strong> @Model.MoTa</p>

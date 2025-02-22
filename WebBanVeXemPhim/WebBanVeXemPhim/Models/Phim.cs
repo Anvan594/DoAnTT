@@ -7,7 +7,6 @@ namespace WebBanVeXemPhim.Models;
 public partial class Phim
 {
     public int MaPhim { get; set; }
-
     public string TenPhim { get; set; } = null!;
 
     public string TheLoai { get; set; } = null!;
@@ -16,7 +15,9 @@ public partial class Phim
 
     public string? MoTa { get; set; }
     public string? DoTuoi { get; set; }
-
+    public string? DienVien {  get; set; }
+    public string? DaoDien { get; set; }
+    public string? NgonNgu { get; set; }
     public DateOnly NgayKhoiChieu { get; set; }
 
     public string? Poster { get; set; }
@@ -26,5 +27,4 @@ public partial class Phim
     public virtual ICollection<LichChieu> LichChieus { get; set; } = new List<LichChieu>();
 
     public virtual ICollection<Trailer> Trailers { get; set; } = new List<Trailer>();
-
 }

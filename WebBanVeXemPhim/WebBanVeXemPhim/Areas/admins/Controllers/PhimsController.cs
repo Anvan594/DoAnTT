@@ -69,7 +69,7 @@ namespace WebBanVeXemPhim.Areas.admins.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TenPhim,TheLoai,DoTuoi,ThoiLuong,NgayKhoiChieu,MoTa,TrangThai")] Phim phim, IFormFile PosterFile)
+        public async Task<IActionResult> Create([Bind("TenPhim,TheLoai,DoTuoi,ThoiLuong,NgayKhoiChieu,MoTa,TrangThai,DaoDien,DienVien,NgonNgu")] Phim phim, IFormFile PosterFile)
         {
             if (!ModelState.IsValid)
             {
@@ -156,6 +156,9 @@ namespace WebBanVeXemPhim.Areas.admins.Controllers
                     existingPhim.TenPhim = phim.TenPhim;
                     existingPhim.TheLoai = phim.TheLoai;
                     existingPhim.DoTuoi = phim.DoTuoi;
+                    existingPhim.DaoDien = phim.DaoDien;
+                    existingPhim.DienVien = phim.DienVien;
+                    existingPhim.NgonNgu = phim.NgonNgu;
                     existingPhim.ThoiLuong = phim.ThoiLuong;
                     existingPhim.NgayKhoiChieu = phim.NgayKhoiChieu;
                     existingPhim.MoTa = phim.MoTa;

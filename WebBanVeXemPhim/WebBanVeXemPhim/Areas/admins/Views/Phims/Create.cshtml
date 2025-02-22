@@ -39,6 +39,11 @@
                     <input asp-for="NgayKhoiChieu" type="date" class="form-control" required />
                     <span asp-validation-for="NgayKhoiChieu" class="text-danger"></span>
                 </div>
+                <div class="form-group">
+                    <label asp-for="Poster" class="control-label">Ảnh poster</label>
+                    <input type="file" name="PosterFile" class="form-control" accept="image/*" required />
+                    <span asp-validation-for="Poster" class="text-danger"></span>
+                </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
@@ -46,10 +51,21 @@
                     <textarea asp-for="MoTa" class="form-control" rows="3" required></textarea>
                     <span asp-validation-for="MoTa" class="text-danger"></span>
                 </div>
+
                 <div class="form-group">
-                    <label asp-for="Poster" class="control-label">Ảnh poster</label>
-                    <input type="file" name="PosterFile" class="form-control" accept="image/*" required />
-                    <span asp-validation-for="Poster" class="text-danger"></span>
+                    <label asp-for="DaoDien" class="control-label">Đạo diễn</label>
+                    <input asp-for="DaoDien" class="form-control" />
+                    <span asp-validation-for="DaoDien" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DienVien" class="control-label">Diễn viên</label>
+                    <input asp-for="DienVien" class="form-control" />
+                    <span asp-validation-for="DienVien" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NgonNgu" class="control-label">Ngôn ngữ</label>
+                    <input asp-for="NgonNgu" class="form-control" />
+                    <span asp-validation-for="DaoDien" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="TrangThai" class="control-label">Trạng thái</label>
@@ -59,9 +75,10 @@
                     </select>
                     <span asp-validation-for="TrangThai" class="text-danger"></span>
                 </div>
+                <button type="button" class="btn btn-success" onclick="submitCreateForm()">Lưu</button>
             </div>
         </div>
-        <button type="button" class="btn btn-success" onclick="submitCreateForm()">Lưu</button>
+       
     </form>
 </div>
 
